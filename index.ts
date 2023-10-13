@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { BSCResponse } from './types';
 
-const CHANNEL_ID = '918902350150787105';
+const CHANNEL_ID = '1162315890612781076';
 const WALLET_TO_TRACK = '0xc3057A78aC51Aec5cd69accf3bc5F4D558b8a1e1';
 const VALUE_THRESHOLD = 10;
 
