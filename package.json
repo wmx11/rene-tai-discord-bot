@@ -7,6 +7,7 @@
     "build": "npx tsc --build"
   },
   "dependencies": {
+    "axios": "^1.5.1",
     "discord.js": "^14.13.0",
     "dotenv": "^16.3.1",
     "ethers": "^6.8.0",

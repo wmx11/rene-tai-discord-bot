@@ -4,6 +4,7 @@ import { ethers } from 'ethers';
 import fs from 'fs';
 import path from 'path';
 import { BSCResponse } from './types';
+import axios from 'axios';
 
 const CHANNEL_ID = '1162315890612781076';
 const WALLET_TO_TRACK = '0xc3057A78aC51Aec5cd69accf3bc5F4D558b8a1e1';
@@ -16,8 +17,8 @@ const bscScan = `https://api.bscscan.com/api?module=account&action=tokentx&contr
 
 const callBscScan = async (): Promise<BSCResponse | null> => {
   try {
-    const call = await fetch(bscScan);
-    const response: BSCResponse = await call.json();
+    const request = await axios(bscScan);
+    const response = request.data;
     return response;
   } catch (error) {
     console.error('callBscScan', error?.toString());
